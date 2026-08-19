@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Qwen3.8-27B — Tannit AI</title>
+<meta name="description" content="Specification and API details for Qwen3.8-27B as served by Tannit AI.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="wordmark" href="index.html">Tannit<span>.</span>AI</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html">Overview</a>
+      <a href="model.html" aria-current="page">Model</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Model · 001</p>
+    <h1>Qwen3.8-27B</h1>
+    <p class="lede">A dense 27-billion-parameter vision-language model from Alibaba, released under Apache 2.0. Tannit serves it as <strong>tannit/qwen3.8-27b</strong>.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <p class="eyebrow">Specification</p>
+    <h2>Datasheet</h2>
+
+    <div class="sheet">
+      <div class="sheet-head">
+        <span class="part">tannit/qwen3.8-27b</span>
+        <span class="rev">Datasheet · Rev A</span>
+      </div>
+      <table class="rows">
+        <tbody>
+          <tr><th scope="row">Base model</th><td>Qwen3.8-27B</td></tr>
+          <tr><th scope="row">Developer</th><td>Alibaba</td></tr>
+          <tr><th scope="row">Licence</th><td>Apache License 2.0</td></tr>
+          <tr><th scope="row">Architecture</th><td>Dense, 27B parameters</td></tr>
+          <tr><th scope="row">Context window</th><td>262,144 tokens</td></tr>
+          <tr><th scope="row">Max output tokens</th><td><span class="ph">[[MAX_OUTPUT_TOKENS]]</span></td></tr>
+          <tr><th scope="row">Input</th><td>Text, image, video</td></tr>
+          <tr><th scope="row">Output</th><td>Text</td></tr>
+          <tr><th scope="row">Reasoning control</th><td>reasoning_effort</td></tr>
+          <tr><th scope="row">Tool calling</th><td><span class="ph">[[TOOL_CALLING]]</span></td></tr>
+          <tr><th scope="row">Structured output</th><td><span class="ph">[[STRUCTURED_OUTPUT]]</span></td></tr>
+          <tr><th scope="row">Streaming</th><td>Supported</td></tr>
+          <tr><th scope="row">Regions</th><td>EU, US, CA, KR, CN, IL</td></tr>
+          <tr><th scope="row">Price · input</th><td><span class="ph">[[PRICE_INPUT]]</span> / 1M tokens</td></tr>
+          <tr><th scope="row">Price · output</th><td><span class="ph">[[PRICE_OUTPUT]]</span> / 1M tokens</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <p class="eyebrow">Integration</p>
+    <h2>Calling the endpoint</h2>
+    <p>The API follows the OpenAI chat completions schema. Any client that speaks it will work once the base URL is changed.</p>
+
+<pre class="code"><span class="c"># Python — openai SDK</span>
+from openai import OpenAI
+
+client = OpenAI(
+    base_url=<span class="s">"[[API_BASE_URL]]"</span>,
+    api_key=<span class="s">"$TANNIT_API_KEY"</span>,
+)
+
+resp = client.chat.completions.create(
+    model=<span class="s">"tannit/qwen3.8-27b"</span>,
+    messages=[{<span class="s">"role"</span>: <span class="s">"user"</span>, <span class="s">"content"</span>: <span class="s">"Summarise this repo."</span>}],
+    stream=<span class="s">True</span>,
+)</pre>
+
+    <h3>Discovery</h3>
+    <p>A <code>/models</code> endpoint returns the served model list with pricing, context length, maximum output tokens, supported features and datacenter regions.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <p class="eyebrow">Attribution</p>
+    <h2>Licence and provenance</h2>
+    <p>Qwen3.8-27B was developed and released by Alibaba under the Apache License 2.0. Tannit AI serves the model without modification to its weights and is not affiliated with, sponsored by, or endorsed by Alibaba. Tannit's proprietary work is in the hardware and inference stack the model runs on, not in the model itself.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h4>Service</h4>
+        <ul>
+          <li><a href="model.html">Model</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy policy</a></li>
+          <li><a href="terms.html">Terms of service</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="mailto:support@tannit.org">support@tannit.org</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      Tannit AI LLC · Horev 50, Haifa, Israel<br>
+      Serves Qwen3.8-27B, developed by Alibaba and released under the Apache License 2.0. Tannit AI is not affiliated with or endorsed by Alibaba.<br>
+      &copy; 2026 Tannit AI LLC
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

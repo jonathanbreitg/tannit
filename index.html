@@ -1,5 +1,165 @@
 <!DOCTYPE html>
-<html>
-<head><title>Hello tanni!</title></head>
-<body>Hello tannittttestinggg!</body>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tannit AI — Qwen3.8-27B inference, served cheaper</title>
+<meta name="description" content="Tannit AI runs Qwen3.8-27B on proprietary hardware and an inference stack built for energy efficiency. OpenAI-compatible API, zero prompt retention.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="wordmark" href="index.html">Tannit<span>.</span>AI</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html" aria-current="page">Overview</a>
+      <a href="model.html">Model</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Inference provider · Tannit AI LLC · Haifa, IL</p>
+    <h1>Qwen3.8-27B, served cheaper.</h1>
+    <p class="lede">We run one model well. Tannit AI serves <strong>Qwen3.8-27B</strong> on proprietary hardware and an inference stack built for energy efficiency &mdash; the same open model you already know, at a lower cost per token. OpenAI-compatible endpoint, no prompt retention.</p>
+
+<pre class="code"><span class="c"># Point your existing client at Tannit</span>
+curl <span class="s">[[API_BASE_URL]]/chat/completions</span> \
+  -H <span class="s">"Authorization: Bearer $TANNIT_API_KEY"</span> \
+  -H <span class="s">"Content-Type: application/json"</span> \
+  -d <span class="s">'{
+    "model": "tannit/qwen3.8-27b",
+    "messages": [{"role": "user", "content": "Hello"}],
+    "stream": true
+  }'</span></pre>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <p class="eyebrow">Specification</p>
+    <h2>What we serve</h2>
+
+    <div class="sheet">
+      <div class="sheet-head">
+        <span class="part">tannit/qwen3.8-27b</span>
+        <span class="rev">Datasheet · Rev A</span>
+      </div>
+      <table class="rows">
+        <tbody>
+          <tr><th scope="row">Base model</th><td>Qwen3.8-27B</td></tr>
+          <tr><th scope="row">Developer</th><td>Alibaba · Apache 2.0</td></tr>
+          <tr><th scope="row">Parameters</th><td>27B dense</td></tr>
+          <tr><th scope="row">Context window</th><td>262,144 tokens</td></tr>
+          <tr><th scope="row">Input modalities</th><td>Text, image, video</td></tr>
+          <tr><th scope="row">Output modalities</th><td>Text</td></tr>
+          <tr><th scope="row">Reasoning</th><td>Configurable via reasoning_effort</td></tr>
+          <tr><th scope="row">Max output tokens</th><td><span class="ph">[[MAX_OUTPUT_TOKENS]]</span></td></tr>
+          <tr><th scope="row">Price · input</th><td><span class="ph">[[PRICE_INPUT]]</span> / 1M tokens</td></tr>
+          <tr><th scope="row">Price · output</th><td><span class="ph">[[PRICE_OUTPUT]]</span> / 1M tokens</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p style="margin-top:18px"><a href="model.html">Full model page</a></p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <p class="eyebrow">Position</p>
+    <h2>Why us and not the next endpoint</h2>
+    <p>Qwen3.8-27B is open. Anyone can serve it, and plenty do. The difference between providers is not the weights &mdash; it is what the weights run on.</p>
+    <p>Tannit's advantage sits in hardware and in how efficiently we drive it. That work is ours, and it is the reason our cost per token is lower than the market rate for the same model. We do not publish efficiency figures we have not measured, and you should be skeptical of providers who do.</p>
+
+    <h3>Compatibility</h3>
+    <ul class="indicators">
+      <li><b>OpenAI-compatible</b> &mdash; <code>/chat/completions</code> works with existing SDKs. Change the base URL, keep your code.</li>
+      <li><b>Streaming</b> &mdash; supported on all requests.</li>
+      <li><b>Usage accounting</b> &mdash; token counts returned on both streaming and non-streaming responses.</li>
+      <li><b>Model discovery</b> &mdash; <code>/models</code> publishes pricing, context length, supported features and datacenter regions.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <p class="eyebrow">Data handling</p>
+    <h2>We do not keep your prompts</h2>
+    <p>Inference runs in memory. Prompt and completion content is not written to persistent storage, is not logged, and is never used to train or fine-tune any model.</p>
+
+    <ul class="indicators">
+      <li><b>Prompt content stored</b> &mdash; no</li>
+      <li><b>Completion content stored</b> &mdash; no</li>
+      <li><b>Used for training</b> &mdash; no</li>
+      <li class="off"><b>Retained</b> &mdash; aggregate token counts for billing, and operational metadata (timestamp, status code, latency) for a rolling <span class="ph">[[RETENTION_DAYS]]</span>-day window</li>
+    </ul>
+
+    <p style="margin-top:22px"><a href="privacy.html">Read the full policy</a></p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <p class="eyebrow">Infrastructure</p>
+    <h2>Where inference runs</h2>
+    <p>Capacity is distributed across six regions. Region is declared per endpoint so that requests carrying data-residency requirements route correctly.</p>
+    <div class="regions">
+      <div><span>Region</span>European Union</div>
+      <div><span>Region</span>United States</div>
+      <div><span>Region</span>Canada</div>
+      <div><span>Region</span>South Korea</div>
+      <div><span>Region</span>China</div>
+      <div><span>Region</span>Israel</div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h4>Service</h4>
+        <ul>
+          <li><a href="model.html">Model</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy policy</a></li>
+          <li><a href="terms.html">Terms of service</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="mailto:support@tannit.org">support@tannit.org</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      Tannit AI LLC · Horev 50, Haifa, Israel<br>
+      Serves Qwen3.8-27B, developed by Alibaba and released under the Apache License 2.0. Tannit AI is not affiliated with or endorsed by Alibaba.<br>
+      &copy; 2026 Tannit AI LLC
+    </div>
+  </div>
+</footer>
+
+</body>
 </html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy policy — Tannit AI</title>
+<meta name="description" content="How Tannit AI handles customer content and account data.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<!--
+  DRAFT — REQUIRES REVIEW BY QUALIFIED COUNSEL BEFORE PUBLICATION.
+  Every factual claim below must be verified against the actual behaviour of the
+  serving stack. Placeholders marked [[ ]] must be resolved or removed.
+-->
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="wordmark" href="index.html">Tannit<span>.</span>AI</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html">Overview</a>
+      <a href="model.html">Model</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="privacy.html" aria-current="page">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="legal">
+  <div class="wrap">
+
+    <h1>Privacy policy</h1>
+    <p class="stamp">Tannit AI LLC · Horev 50, Haifa, Israel · Effective <span class="ph">[[EFFECTIVE_DATE]]</span> · Version 1.0</p>
+
+    <p>This policy explains what Tannit AI LLC (&ldquo;Tannit&rdquo;, &ldquo;we&rdquo;) does with information when you use our inference API. It is written in two parts, because we handle two different kinds of information under two different roles.</p>
+
+    <ul>
+      <li><strong>Customer content</strong> &mdash; the prompts you send and the completions we return. We process this on your instruction, as a processor. Section 1.</li>
+      <li><strong>Account data</strong> &mdash; the information identifying you or your organisation as a customer. We determine how this is used, as a controller. Section 2.</li>
+    </ul>
+
+    <h2>1. Customer content</h2>
+
+    <h3>1.1 What we do not do</h3>
+    <p>Prompts and completions are processed in memory for the duration of the request. We do not write prompt or completion content to persistent storage. We do not log prompt or completion content. We do not use customer content to train, fine-tune, evaluate or otherwise improve any model, and we do not disclose customer content to any third party for those purposes.</p>
+
+    <h3>1.2 What we retain</h3>
+    <p>To bill accurately and to keep the service running, we retain:</p>
+    <ul>
+      <li><strong>Aggregate token counts</strong> per account, for billing and reconciliation.</li>
+      <li><strong>Operational metadata</strong> &mdash; request timestamp, model identifier, HTTP status code, latency and token totals &mdash; for a rolling <span class="ph">[[RETENTION_DAYS]]</span>-day period, after which it is deleted.</li>
+    </ul>
+    <p>Operational metadata does not include prompt or completion content.</p>
+
+    <h3>1.3 Your responsibilities</h3>
+    <p>Because we do not inspect or store what you send, you are responsible for ensuring you have the rights and lawful basis to transmit any content you submit, including personal data belonging to your own users.</p>
+
+    <h2>2. Account data</h2>
+
+    <h3>2.1 What we collect</h3>
+    <ul>
+      <li><strong>Identity and contact</strong> &mdash; name, business email address, organisation name.</li>
+      <li><strong>Billing</strong> &mdash; billing address, tax identifiers, and payment records. Card details are handled by our payment processor and are not stored by Tannit.</li>
+      <li><strong>Access</strong> &mdash; API key identifiers and their usage totals.</li>
+      <li><strong>Correspondence</strong> &mdash; messages you send to our support or privacy addresses.</li>
+    </ul>
+
+    <h3>2.2 What we use it for</h3>
+    <p>We use account data only for these purposes:</p>
+    <ul>
+      <li>To create and administer your account and issue API credentials.</li>
+      <li>To meter usage, issue invoices and collect payment.</li>
+      <li>To respond to support requests and correspondence you initiate.</li>
+      <li>To send service notices &mdash; outages, security advisories, and material changes to these terms. These are operational, not marketing, and cannot be opted out of while your account is active.</li>
+      <li>To detect and prevent abuse, fraud and unauthorised access.</li>
+      <li>To comply with legal, tax and accounting obligations.</li>
+    </ul>
+    <p>We do not sell account data. We do not use it for advertising, and we do not use it to train models.</p>
+
+    <h3>2.3 How long we keep it</h3>
+    <p>Account and billing records are retained for the life of the account and afterwards for the period required by applicable tax and company law. Support correspondence is retained for <span class="ph">[[SUPPORT_RETENTION]]</span>. API key identifiers are deleted when the key is revoked.</p>
+
+    <h2>3. Sub-processors and infrastructure</h2>
+    <p>Tannit operates inference capacity in datacentre facilities in the <strong>European Union, United States, Canada, South Korea, China and Israel</strong>. Facility operators provide physical and network infrastructure; they do not receive customer content in a readable, retained form, because no such content is written to storage.</p>
+    <p>A current list of sub-processors is available on request from <a href="mailto:privacy@tannit.org">privacy@tannit.org</a>.</p>
+
+    <div class="callout">
+      <p><strong>Region selection.</strong> Where you require inference to run only in specified jurisdictions, region constraints can be applied to your account. Contact us before you begin sending traffic.</p>
+    </div>
+
+    <h2>4. International transfers</h2>
+    <p>Because our capacity spans several jurisdictions, a request may be processed outside the country from which it originated. Content exists only transiently in the processing region and is not retained there. Where transfers involve personal data subject to European law, we rely on <span class="ph">[[TRANSFER_MECHANISM]]</span>.</p>
+
+    <h2>5. Your rights</h2>
+    <p>Depending on where you are, you may have rights to access, correct, delete, or receive a copy of the account data we hold about you, to object to or restrict its processing, and to complain to a supervisory authority.</p>
+    <p>To exercise any of these, write to <a href="mailto:privacy@tannit.org">privacy@tannit.org</a>. We will respond within <span class="ph">[[RESPONSE_WINDOW]]</span>.</p>
+    <p>We cannot act on requests concerning prompt or completion content, because we do not retain it and therefore cannot locate, produce or delete it.</p>
+
+    <div class="callout">
+      <p><strong>European users.</strong> Tannit AI LLC is established in Israel and operates capacity within the European Union. Our representative for the purposes of Article 27 of the GDPR is <span class="ph">[[EU_REPRESENTATIVE]]</span>.</p>
+    </div>
+
+    <h2>6. Security</h2>
+    <p>Access to production infrastructure is restricted to authorised personnel and requires individual credentials. API traffic is encrypted in transit. Because customer content is not stored, the surface available to a storage compromise does not include prompts or completions.</p>
+
+    <h2>7. Children</h2>
+    <p>The service is offered to businesses and developers. It is not directed at children, and we do not knowingly collect account data from anyone under 16.</p>
+
+    <h2>8. Changes</h2>
+    <p>If we change this policy in a way that materially affects how customer content is handled, we will notify account holders by email before the change takes effect. The version number and effective date at the top of this page always reflect the current text.</p>
+
+    <h2>9. Contact</h2>
+    <p>
+      Tannit AI LLC<br>
+      Horev 50, Haifa, Israel<br>
+      Privacy enquiries: <a href="mailto:privacy@tannit.org">privacy@tannit.org</a><br>
+      General: <a href="mailto:support@tannit.org">support@tannit.org</a>
+    </p>
+
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="colophon">
+      Tannit AI LLC · Horev 50, Haifa, Israel<br>
+      <a href="index.html">Overview</a> · <a href="model.html">Model</a> · <a href="pricing.html">Pricing</a> · <a href="terms.html">Terms</a> · <a href="contact.html">Contact</a><br>
+      &copy; 2026 Tannit AI LLC
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
