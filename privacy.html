@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy policy — Tannit AI</title>
-<meta name="description" content="How Tannit AI handles customer content and account data.">
+<meta name="description" content="Privacy practices of Tannit AI LLC.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -12,8 +12,16 @@
 </head>
 <!--
   DRAFT — REQUIRES REVIEW BY QUALIFIED COUNSEL BEFORE PUBLICATION.
-  Every factual claim below must be verified against the actual behaviour of the
-  serving stack. Placeholders marked [[ ]] must be resolved or removed.
+
+  UNRESOLVED CONFLICT: section 3 ("Customer content and model training")
+  permits training on free-tier inputs and outputs. The homepage and model
+  page state that customer content is never used for training. One must change.
+
+  Removed from the supplied draft as not applicable to this business:
+  Instagram integration, YouTube/Google API integration, Google Drive and S3
+  file processing, job application data and recruiting purposes, corporate
+  affiliates and subsidiaries, separate Cookie Notice, third-party analytics
+  providers. Domain normalised from tannit.ai to tannit.org.
 -->
 <body>
 
@@ -35,92 +43,215 @@
   <div class="wrap">
 
     <h1>Privacy policy</h1>
-    <p class="stamp">Tannit AI LLC · Horev 50, Haifa, Israel · Effective <span class="ph">[[EFFECTIVE_DATE]]</span> · Version 1.0</p>
+    <p class="stamp">Tannit AI LLC · Horev 50, Haifa, Israel · Effective <span class="ph">[[EFFECTIVE_DATE]]</span></p>
 
-    <p>This policy explains what Tannit AI LLC (&ldquo;Tannit&rdquo;, &ldquo;we&rdquo;) does with information when you use our inference API. It is written in two parts, because we handle two different kinds of information under two different roles.</p>
+    <p>This Privacy Policy describes the privacy practices of Tannit AI LLC (&ldquo;Tannit AI,&rdquo; &ldquo;we,&rdquo; &ldquo;us&rdquo; or &ldquo;our&rdquo;) and how we handle personal information that we collect through our website at <a href="https://tannit.org/">tannit.org</a>, our products, our online services and other digital properties that link to this Privacy Policy (collectively, the &ldquo;Service&rdquo;), as well as through our marketing activities and other activities described in this Privacy Policy. If you are located in the European Economic Area (the &ldquo;EEA&rdquo;) or the United Kingdom (the &ldquo;UK&rdquo;), please consult the Notice to European users below.</p>
 
-    <ul>
-      <li><strong>Customer content</strong> &mdash; the prompts you send and the completions we return. We process this on your instruction, as a processor. Section 1.</li>
-      <li><strong>Account data</strong> &mdash; the information identifying you or your organisation as a customer. We determine how this is used, as a controller. Section 2.</li>
+    <h2>Index</h2>
+    <ul class="toc">
+      <li><a href="#collect">Personal information we collect</a></li>
+      <li><a href="#use">How we use your personal information</a></li>
+      <li><a href="#content">Customer content and model training</a></li>
+      <li><a href="#share">How we share your personal information</a></li>
+      <li><a href="#choices">Your choices</a></li>
+      <li><a href="#othersites">Other sites and services</a></li>
+      <li><a href="#security">Security</a></li>
+      <li><a href="#transfer">International data transfer</a></li>
+      <li><a href="#children">Children</a></li>
+      <li><a href="#changes">Changes to this Privacy Policy</a></li>
+      <li><a href="#contact">How to contact us</a></li>
+      <li><a href="#europe">Notice to European users</a></li>
     </ul>
 
-    <h2>1. Customer content</h2>
+    <h2 id="collect">1. Personal information we collect</h2>
 
-    <h3>1.1 What we do not do</h3>
-    <p>Prompts and completions are processed in memory for the duration of the request. We do not write prompt or completion content to persistent storage. We do not log prompt or completion content. We do not use customer content to train, fine-tune, evaluate or otherwise improve any model, and we do not disclose customer content to any third party for those purposes.</p>
+    <p>When you use our Services or communicate with us, we may collect certain personal information about you. This section describes the types of personal information we may collect, and the ways in which we collect it.</p>
 
-    <h3>1.2 What we retain</h3>
-    <p>To bill accurately and to keep the service running, we retain:</p>
+    <h3>Information you provide to us</h3>
     <ul>
-      <li><strong>Aggregate token counts</strong> per account, for billing and reconciliation.</li>
-      <li><strong>Operational metadata</strong> &mdash; request timestamp, model identifier, HTTP status code, latency and token totals &mdash; for a rolling <span class="ph">[[RETENTION_DAYS]]</span>-day period, after which it is deleted.</li>
-    </ul>
-    <p>Operational metadata does not include prompt or completion content.</p>
-
-    <h3>1.3 Your responsibilities</h3>
-    <p>Because we do not inspect or store what you send, you are responsible for ensuring you have the rights and lawful basis to transmit any content you submit, including personal data belonging to your own users.</p>
-
-    <h2>2. Account data</h2>
-
-    <h3>2.1 What we collect</h3>
-    <ul>
-      <li><strong>Identity and contact</strong> &mdash; name, business email address, organisation name.</li>
-      <li><strong>Billing</strong> &mdash; billing address, tax identifiers, and payment records. Card details are handled by our payment processor and are not stored by Tannit.</li>
-      <li><strong>Access</strong> &mdash; API key identifiers and their usage totals.</li>
-      <li><strong>Correspondence</strong> &mdash; messages you send to our support or privacy addresses.</li>
+      <li><strong>Contact information:</strong> your first and last name, business, email address, mailing address, professional title and company name, and phone number.</li>
+      <li><strong>Sign-up information:</strong> the username and password you set to establish an online account with us.</li>
+      <li><strong>Account profile information:</strong> your preferred language, your location (city or country), and any other information you add to your account profile.</li>
+      <li><strong>Communications information:</strong> information we exchange with you, including when you contact us with questions or feedback.</li>
+      <li><strong>Other information:</strong> information not specifically listed here, which we will use as described in this Privacy Policy or as otherwise disclosed at the time of collection.</li>
     </ul>
 
-    <h3>2.2 What we use it for</h3>
-    <p>We use account data only for these purposes:</p>
+    <h3>Automatic data collection</h3>
+    <p>If you use our Services, we may automatically log information about you, your computer or mobile device, and your interactions with us over time, such as your IP address.</p>
+
+    <h3>Cookies and similar technologies</h3>
+    <p>Some of our automatic data collection is facilitated by cookies and similar technologies:</p>
     <ul>
-      <li>To create and administer your account and issue API credentials.</li>
-      <li>To meter usage, issue invoices and collect payment.</li>
-      <li>To respond to support requests and correspondence you initiate.</li>
-      <li>To send service notices &mdash; outages, security advisories, and material changes to these terms. These are operational, not marketing, and cannot be opted out of while your account is active.</li>
-      <li>To detect and prevent abuse, fraud and unauthorised access.</li>
-      <li>To comply with legal, tax and accounting obligations.</li>
+      <li><strong>Cookies:</strong> text files that websites store on a visitor's device to identify the browser or to store settings, helping you navigate between pages, remembering preferences, enabling functionality, and helping us understand usage patterns.</li>
+      <li><strong>Local storage technologies:</strong> technologies such as HTML5 that provide cookie-equivalent functionality but can store larger amounts of data on your device.</li>
     </ul>
-    <p>We do not sell account data. We do not use it for advertising, and we do not use it to train models.</p>
 
-    <h3>2.3 How long we keep it</h3>
-    <p>Account and billing records are retained for the life of the account and afterwards for the period required by applicable tax and company law. Support correspondence is retained for <span class="ph">[[SUPPORT_RETENTION]]</span>. API key identifiers are deleted when the key is revoked.</p>
+    <h2 id="use">2. How we use your personal information</h2>
 
-    <h2>3. Sub-processors and infrastructure</h2>
-    <p>Tannit operates inference capacity in datacentre facilities in the <strong>European Union, United States, Canada, South Korea, China and Israel</strong>. Facility operators provide physical and network infrastructure; they do not receive customer content in a readable, retained form, because no such content is written to storage.</p>
-    <p>A current list of sub-processors is available on request from <a href="mailto:privacy@tannit.org">privacy@tannit.org</a>.</p>
+    <p>For the personal information we collect about you as a controller, we may use such personal information for the following purposes or as otherwise described at the time of collection:</p>
+
+    <ul>
+      <li><strong>Service delivery.</strong> To provide, operate, maintain and improve the Services and our business; establish and maintain your user account; communicate with you, including by sending announcements, updates, security alerts, and support and administrative messages; understand your needs and interests, and personalise your experience with the Services and our communications; and provide support for the Services, and respond to your requests, questions and feedback.</li>
+      <li><strong>Research and development.</strong> To analyse and improve the Services and our business. As part of these activities, we may create aggregated, de-identified or anonymous data from personal information we collect. We may use this data and share it with third parties for our lawful business purposes.</li>
+      <li><strong>Compliance and protection.</strong> To comply with applicable laws, lawful requests and legal process, such as responding to subpoenas or requests from government authorities; protect our, your or others' rights, privacy, safety or property, including by making and defending legal claims; audit our internal processes for compliance with legal and contractual requirements; enforce the terms that govern the Services; and prevent, identify, investigate and deter fraudulent, harmful, unauthorised or illegal activity, including cyberattacks and identity theft.</li>
+      <li><strong>With your consent.</strong> In some cases we may specifically ask for your consent to collect, use or share your personal information, such as when required by law.</li>
+      <li><strong>Cookies and similar technologies.</strong> For the purposes outlined in the section above.</li>
+    </ul>
+
+    <h2 id="content">3. Customer content and model training</h2>
 
     <div class="callout">
-      <p><strong>Region selection.</strong> Where you require inference to run only in specified jurisdictions, region constraints can be applied to your account. Contact us before you begin sending traffic.</p>
+      <p><strong>Unresolved &mdash; must be settled before publication.</strong> <span class="ph">[[TRAINING_POLICY]]</span> The text below permits training on free-tier inputs and outputs. The homepage and model page state that customer content is never used for training. These positions contradict each other.</p>
     </div>
 
-    <h2>4. International transfers</h2>
-    <p>Because our capacity spans several jurisdictions, a request may be processed outside the country from which it originated. Content exists only transiently in the processing region and is not retained there. Where transfers involve personal data subject to European law, we rely on <span class="ph">[[TRANSFER_MECHANISM]]</span>.</p>
+    <p>If you use our Services on a free basis, including through promotional credits via the API, we may use your interactions with the Services &mdash; such as inputs, outputs and related usage data &mdash; to train and improve our machine learning models. If your request is a paid request, made through the API after you have added payment details and purchased usage credits, we will not use your content for model training unless you have explicitly opted in through your account settings or by contacting us. In all cases, we may use aggregated, de-identified or anonymised data for analytics, service optimisation and abuse detection.</p>
 
-    <h2>5. Your rights</h2>
-    <p>Depending on where you are, you may have rights to access, correct, delete, or receive a copy of the account data we hold about you, to object to or restrict its processing, and to complain to a supervisory authority.</p>
-    <p>To exercise any of these, write to <a href="mailto:privacy@tannit.org">privacy@tannit.org</a>. We will respond within <span class="ph">[[RESPONSE_WINDOW]]</span>.</p>
-    <p>We cannot act on requests concerning prompt or completion content, because we do not retain it and therefore cannot locate, produce or delete it.</p>
+    <h2 id="share">4. How we share your personal information</h2>
 
-    <div class="callout">
-      <p><strong>European users.</strong> Tannit AI LLC is established in Israel and operates capacity within the European Union. Our representative for the purposes of Article 27 of the GDPR is <span class="ph">[[EU_REPRESENTATIVE]]</span>.</p>
-    </div>
+    <p>For the personal information we collect about you as a controller, we may share such personal information with the following parties and as otherwise described in this Privacy Policy or at the time of collection.</p>
 
-    <h2>6. Security</h2>
-    <p>Access to production infrastructure is restricted to authorised personnel and requires individual credentials. API traffic is encrypted in transit. Because customer content is not stored, the surface available to a storage compromise does not include prompts or completions.</p>
+    <ul>
+      <li><strong>Service providers.</strong> Third parties that provide services on our behalf or help us operate the Services or our business, such as hosting, information technology, customer support, email delivery and website analytics.</li>
+      <li><strong>Professional advisors.</strong> Lawyers, auditors, bankers and insurers, where necessary in the course of the professional services they render to us.</li>
+      <li><strong>Authorities and others.</strong> Law enforcement, government authorities and private parties, as we believe in good faith to be necessary or appropriate for the compliance and protection purposes described above.</li>
+      <li><strong>Business transferees.</strong> Acquirers and other relevant participants in business transactions, or negotiations and diligence for such transactions, involving a corporate divestiture, merger, consolidation, acquisition, reorganisation, sale or other disposition of all or any portion of the business or assets of, or equity interests in, Tannit AI, including in connection with a bankruptcy or similar proceedings.</li>
+    </ul>
 
-    <h2>7. Children</h2>
-    <p>The service is offered to businesses and developers. It is not directed at children, and we do not knowingly collect account data from anyone under 16.</p>
+    <p>We do not sell personal information.</p>
 
-    <h2>8. Changes</h2>
-    <p>If we change this policy in a way that materially affects how customer content is handled, we will notify account holders by email before the change takes effect. The version number and effective date at the top of this page always reflect the current text.</p>
+    <h2 id="choices">5. Your choices</h2>
 
-    <h2>9. Contact</h2>
+    <ul>
+      <li><strong>Opt-in and opt-out for model training.</strong> If you are a paying user, you can choose whether to allow Tannit AI to use your content, such as prompts and outputs, to improve our models. You may opt in or withdraw your consent at any time by adjusting your account settings or contacting us at <a href="mailto:privacy@tannit.org">privacy@tannit.org</a>.</li>
+      <li><strong>Access or update your information.</strong> If you have registered for an account, you may review and update certain account information by logging in.</li>
+      <li><strong>Cookies.</strong> Most browsers let you remove or reject cookies by following the instructions in your browser settings. If you disable cookies, the Services may not work properly.</li>
+      <li><strong>Do Not Track.</strong> Some browsers can be configured to send &ldquo;Do Not Track&rdquo; signals. We currently do not respond to these or similar signals.</li>
+      <li><strong>Declining to provide information.</strong> We need to collect personal information to provide certain services. If you do not provide information we identify as required, we may not be able to provide those services.</li>
+    </ul>
+
+    <h2 id="othersites">6. Other sites and services</h2>
+    <p>The Services may contain links to third party websites and other online services operated by third parties. These links are not an endorsement of, or a representation that we are affiliated with, any third party. We do not control third-party services, we are not responsible for their actions, and they are not subject to this Privacy Policy. We encourage you to read the privacy policies of the other services you use.</p>
+
+    <h2 id="security">7. Security</h2>
+    <p>We employ technical, organisational and physical safeguards designed to protect the personal information we collect. However, security risk is inherent in all internet and information technologies, and we cannot guarantee the security of your personal information.</p>
+    <p>We take the security of our systems seriously and value the contributions of the security community. If you believe you have discovered a potential vulnerability, please email <a href="mailto:security@tannit.org">security@tannit.org</a> with sufficient detail to help us reproduce and understand it. Please allow us a reasonable amount of time to investigate and resolve the issue before disclosing it publicly or to any third party, make a good-faith effort to avoid violating privacy, destroying data, or interrupting or degrading Tannit AI services, and interact only with accounts you own or for which you have explicit authorisation from the account holder.</p>
+
+    <h2 id="transfer">8. International data transfer</h2>
+    <p>We may use service providers that operate in other countries. Your personal information may be transferred to locations where privacy laws may differ from those in your state, province or country.</p>
+    <p>Users in the UK and the EEA should read the information provided in the Notice to European users below about transfers of personal data outside the EEA and UK.</p>
+
+    <h2 id="children">9. Children</h2>
+    <p>Our Services are not intended for use by children. If we learn that we have collected personal information through our Services from a child without the consent of the child's parent or guardian as required by law, we will delete it. We encourage parents or guardians with concerns to contact us.</p>
+
+    <h2 id="changes">10. Changes to this Privacy Policy</h2>
+    <p>We reserve the right to modify this Privacy Policy at any time. If we make material changes, we will notify you by updating the date of this Privacy Policy and posting it on our Services. If required by law we will also provide notification in another way that we believe is reasonably likely to reach you. Any modifications will be effective upon posting the modified version, or as otherwise indicated at the time of posting. We recommend that you check this Privacy Policy periodically.</p>
+
+    <h2 id="contact">11. How to contact us</h2>
     <p>
-      Tannit AI LLC<br>
-      Horev 50, Haifa, Israel<br>
-      Privacy enquiries: <a href="mailto:privacy@tannit.org">privacy@tannit.org</a><br>
-      General: <a href="mailto:support@tannit.org">support@tannit.org</a>
+      <strong>Email:</strong> <a href="mailto:privacy@tannit.org">privacy@tannit.org</a><br>
+      <strong>Mail:</strong> Tannit AI LLC, Horev 50, Haifa, Israel
     </p>
+
+    <h2 id="europe">12. Notice to European users</h2>
+
+    <h3>12.1 Where this notice applies</h3>
+    <p>The information in this section applies only to individuals in the United Kingdom and the European Economic Area, together referred to as &ldquo;Europe&rdquo;.</p>
+
+    <h3>12.2 Personal information</h3>
+    <p>References to &ldquo;personal information&rdquo; in this Privacy Policy should be understood to include a reference to &ldquo;personal data&rdquo; as defined in the GDPR &mdash; information about individuals from which they are either directly identified or can be identified. It does not include anonymous data, meaning information where the identity of the individual has been permanently removed.</p>
+
+    <h3>12.3 Controller</h3>
+    <p>Tannit AI is the controller in respect of the processing of your personal information covered by this Privacy Policy for the purposes of European data protection legislation, being the EU GDPR and the UK GDPR as applicable. See the section above for our contact details.</p>
+
+    <div class="callout">
+      <p><strong>Article 27 representative.</strong> Tannit AI LLC is established in Israel. Our representative in the European Union for the purposes of Article 27 GDPR is <span class="ph">[[EU_REPRESENTATIVE]]</span>.</p>
+    </div>
+
+    <h3>12.4 Our legal bases for processing</h3>
+    <p>In respect of each purpose for which we use your personal information, the GDPR requires us to have a legal basis for that use. Our legal bases are:</p>
+    <ul>
+      <li>Where we need to perform a contract we are about to enter into or have entered into with you (<strong>Contractual Necessity</strong>).</li>
+      <li>Where it is necessary for our legitimate interests and your interests and fundamental rights do not override those interests (<strong>Legitimate Interests</strong>).</li>
+      <li>Where we need to comply with a legal or regulatory obligation (<strong>Compliance with Law</strong>).</li>
+      <li>Where we have your specific consent to carry out the processing (<strong>Consent</strong>).</li>
+    </ul>
+
+    <div class="tablewrap">
+      <table class="basis">
+        <thead>
+          <tr>
+            <th scope="col">Purpose</th>
+            <th scope="col">Categories of personal information</th>
+            <th scope="col">Legal basis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Service delivery</strong></td>
+            <td>Contact information, sign-up information, account profile information, payment information, communications information, device information</td>
+            <td><strong>Contractual Necessity.</strong> Processing is necessary to perform the contract governing our provision of the services, or to take steps you request before signing up. If we have not entered into a contract with you, we process your personal information based on our legitimate interest in providing the services you access and request.</td>
+          </tr>
+          <tr>
+            <td><strong>Research and development</strong></td>
+            <td>Any and all data types relevant in the circumstances</td>
+            <td><strong>Legitimate Interests.</strong> We have a legitimate interest in understanding what may be of interest to our customers, improving customer relationships and experience, delivering relevant content, and measuring the effectiveness of the content we serve.</td>
+          </tr>
+          <tr>
+            <td><strong>Model training</strong></td>
+            <td><span class="ph">[[TRAINING_POLICY]]</span></td>
+            <td><span class="ph">[[TRAINING_POLICY]]</span> Depends on the position taken in section 3.</td>
+          </tr>
+          <tr>
+            <td><strong>Compliance and protection</strong></td>
+            <td>Any and all data types relevant in the circumstances</td>
+            <td><strong>Compliance with Law.</strong> <strong>Legitimate Interests.</strong> Where Compliance with Law does not apply, we and any relevant third parties have a legitimate interest in participating in, supporting and following legal process and requests, including through co-operation with authorities, and in ensuring the protection, maintenance and enforcement of our and their rights, property and safety.</td>
+          </tr>
+          <tr>
+            <td><strong>Further uses</strong></td>
+            <td>Any and all data types relevant in the circumstances</td>
+            <td>The original legal basis relied upon, if the relevant further use is compatible with the initial purpose for which the personal information was collected. <strong>Consent</strong>, if it is not compatible.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>12.5 Retention</h3>
+    <p>We retain personal information for as long as necessary to fulfil the purposes for which we collected it, including for the purposes of satisfying any legal, accounting or reporting requirements, to establish or defend legal claims, or for compliance and protection purposes. To determine the appropriate retention period we consider the amount, nature and sensitivity of the personal information, the potential risk of harm from unauthorised use or disclosure, the purposes for which we process it and whether we can achieve those purposes through other means, and the applicable legal requirements.</p>
+    <p>When we no longer require the personal information we have collected about you, we will either delete or anonymise it or, if this is not possible &mdash; for example because it has been stored in backup archives &mdash; we will securely store it and isolate it from any further processing until deletion is possible. If we anonymise your personal information so that it can no longer be associated with you, we may use that information indefinitely without further notice to you.</p>
+
+    <h3>12.6 Other information</h3>
+    <p><strong>No sensitive personal information.</strong> We ask that you do not provide us with sensitive personal information, such as national identification numbers, or information related to racial or ethnic origin, political opinions, religion or other beliefs, health, biometric or genetic characteristics, criminal background or trade union membership. If you provide such information to us, you must consent to our processing and use of it in accordance with this Privacy Policy. If you do not consent, you must not submit it through our Services.</p>
+    <p><strong>No automated decision-making or profiling.</strong> As part of the Services, we do not engage in automated decision-making or profiling which produces legal or similarly significant effects.</p>
+
+    <h3>12.7 Your rights</h3>
+    <p>European data protection laws give you certain rights regarding your personal information. If you are located in Europe, you may ask us to take the following actions in relation to the personal information we hold about you:</p>
+    <ul>
+      <li><strong>Access.</strong> Provide you with information about our processing of your personal information and give you access to it.</li>
+      <li><strong>Correct.</strong> Update or correct inaccuracies in your personal information.</li>
+      <li><strong>Delete</strong> your personal information where there is no lawful reason for us to continue storing or processing it, where you have successfully objected to processing, where we may have processed it unlawfully, or where we are required to erase it to comply with local law. We may not always be able to comply with a request for erasure for specific legal reasons, which will be notified to you at the time of your request.</li>
+      <li><strong>Portability.</strong> Port a machine-readable copy of your personal information to you or a third party of your choice, in certain circumstances. This right applies only to automated information for which you initially provided consent, or which we used to perform a contract with you.</li>
+      <li><strong>Restrict</strong> the processing of your personal information if you want us to establish its accuracy; where our use is unlawful but you do not want us to erase it; where you need us to hold it even though we no longer require it, so that you can establish, exercise or defend legal claims; or where you have objected to our use but we need to verify whether we have overriding legitimate grounds.</li>
+      <li><strong>Object</strong> to our processing where we are relying on legitimate interests, or those of a third party, and something about your particular situation makes you want to object on the grounds that it impacts your fundamental rights and freedoms.</li>
+      <li><strong>Withdraw consent.</strong> Where we use your personal information based on your consent, you have the right to withdraw that consent at any time. This will not affect the lawfulness of any processing carried out before you withdraw it.</li>
+    </ul>
+
+    <h3>12.8 Exercising these rights</h3>
+    <p>To exercise any of these rights, contact us using the details above. We may request specific information from you to help us confirm your identity and process your request. Whether we are required to fulfil a request will depend on a number of factors, such as why and how we are processing your personal information. If we reject a request in whole or in part, we will tell you our grounds for doing so at the time, subject to any legal restrictions.</p>
+
+    <h3>12.9 Your right to lodge a complaint</h3>
+    <p>If you are not satisfied with our response to a request, or with how we process your personal information, you can complain to the data protection regulator in your habitual place of residence.</p>
+    <ul>
+      <li><strong>European Economic Area:</strong> contact details for your national regulator are listed at <a href="https://edpb.europa.eu/about-edpb/board/members_en">edpb.europa.eu</a>.</li>
+      <li><strong>United Kingdom:</strong> the Information Commissioner's Office, Water Lane, Wycliffe House, Wilmslow, Cheshire SK9 5AF. Telephone +44 303 123 1113. <a href="https://ico.org.uk/make-a-complaint/">ico.org.uk/make-a-complaint</a>.</li>
+    </ul>
+
+    <h3>12.10 Data processing outside Europe</h3>
+    <p>We, and many of our service providers, advisers, partners and other recipients of data, may be based outside your region. This means that if you use the Services your personal information may necessarily be accessed and processed internationally, and may be provided to recipients in countries outside Europe. Where we share your personal information with third parties based outside Europe, we seek to ensure a similar degree of protection through one of the following mechanisms:</p>
+    <ul>
+      <li><strong>Transfers to territories with an adequacy decision.</strong> We may transfer your personal information to countries or territories whose laws have been deemed to provide an adequate level of protection by the European Commission or the UK Government, as applicable.</li>
+      <li><strong>Transfers to territories without an adequacy decision.</strong> Where laws have not been deemed adequate, we may use specific appropriate safeguards designed to give personal information effectively the same protection it has in Europe, such as standard contractual clauses approved by the relevant authorities; or, in limited circumstances, we may rely on a derogation permitting the transfer despite the absence of an adequacy decision or appropriate safeguards, such as your explicit consent to that transfer.</li>
+    </ul>
+    <p>You may contact us if you want further information on the specific mechanism used when transferring your personal information out of Europe.</p>
 
   </div>
 </main>
