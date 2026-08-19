@@ -13,9 +13,12 @@
 <!--
   DRAFT — REQUIRES REVIEW BY QUALIFIED COUNSEL BEFORE PUBLICATION.
 
-  UNRESOLVED CONFLICT: section 3 ("Customer content and model training")
-  permits training on free-tier inputs and outputs. The homepage and model
-  page state that customer content is never used for training. One must change.
+  TRAINING POSITION RESOLVED: customer content is never used for model
+  training, on any plan. The free-tier training clause from the supplied
+  draft was removed, along with the related opt-out. This now matches the
+  homepage, the model page and section 4.4 of the terms of service.
+  The [[RETENTION_DAYS]] value still requires verification against the
+  actual serving configuration.
 
   Removed from the supplied draft as not applicable to this business:
   Instagram integration, YouTube/Google API integration, Google Drive and S3
@@ -100,11 +103,13 @@
 
     <h2 id="content">3. Customer content and model training</h2>
 
-    <div class="callout">
-      <p><strong>Unresolved &mdash; must be settled before publication.</strong> <span class="ph">[[TRAINING_POLICY]]</span> The text below permits training on free-tier inputs and outputs. The homepage and model page state that customer content is never used for training. These positions contradict each other.</p>
-    </div>
+    <p>Prompts and completions submitted through our API are processed in memory for the duration of the request. We do not write prompt or completion content to persistent storage, we do not log it, and we do not inspect it. <strong>We do not use customer content to train, develop, fine-tune or improve any machine learning model, on any plan, whether paid or free, and we do not disclose customer content to any third party for that purpose.</strong> There is no opt-in.</p>
 
-    <p>If you use our Services on a free basis, including through promotional credits via the API, we may use your interactions with the Services &mdash; such as inputs, outputs and related usage data &mdash; to train and improve our machine learning models. If your request is a paid request, made through the API after you have added payment details and purchased usage credits, we will not use your content for model training unless you have explicitly opted in through your account settings or by contacting us. In all cases, we may use aggregated, de-identified or anonymised data for analytics, service optimisation and abuse detection.</p>
+    <p>Because we do not retain customer content, we are unable to locate, produce, restore or delete it in response to a request. Abuse detection is carried out using request metadata only &mdash; volume, timing, status codes and token counts &mdash; and never by inspecting content.</p>
+
+    <p>We retain aggregate token counts for billing, and operational metadata such as request timestamps, model identifier, status code and latency for a rolling <span class="ph">[[RETENTION_DAYS]]</span>-day period. We may use aggregated and anonymised usage data, which does not identify you or your content, for capacity planning, performance monitoring and abuse prevention.</p>
+
+    <p>As between you and Tannit, you retain all rights in the prompts you submit and own the completions returned to you to the extent they are capable of ownership.</p>
 
     <h2 id="share">4. How we share your personal information</h2>
 
@@ -122,7 +127,6 @@
     <h2 id="choices">5. Your choices</h2>
 
     <ul>
-      <li><strong>Opt-in and opt-out for model training.</strong> If you are a paying user, you can choose whether to allow Tannit AI to use your content, such as prompts and outputs, to improve our models. You may opt in or withdraw your consent at any time by adjusting your account settings or contacting us at <a href="mailto:privacy@tannit.org">privacy@tannit.org</a>.</li>
       <li><strong>Access or update your information.</strong> If you have registered for an account, you may review and update certain account information by logging in.</li>
       <li><strong>Cookies.</strong> Most browsers let you remove or reject cookies by following the instructions in your browser settings. If you disable cookies, the Services may not work properly.</li>
       <li><strong>Do Not Track.</strong> Some browsers can be configured to send &ldquo;Do Not Track&rdquo; signals. We currently do not respond to these or similar signals.</li>
@@ -198,8 +202,8 @@
           </tr>
           <tr>
             <td><strong>Model training</strong></td>
-            <td><span class="ph">[[TRAINING_POLICY]]</span></td>
-            <td><span class="ph">[[TRAINING_POLICY]]</span> Depends on the position taken in section 3.</td>
+            <td>None. Customer content is not used for this purpose.</td>
+            <td>Not applicable. We do not process personal information for model training.</td>
           </tr>
           <tr>
             <td><strong>Compliance and protection</strong></td>

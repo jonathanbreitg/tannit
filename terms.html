@@ -12,8 +12,33 @@
 </head>
 <!--
   DRAFT — REQUIRES REVIEW BY QUALIFIED COUNSEL BEFORE PUBLICATION.
-  Liability, indemnity and governing-law clauses in particular must be reviewed
-  against Israeli law and against the jurisdictions in which capacity operates.
+
+  CHANGES MADE TO THE SUPPLIED DRAFT:
+
+  Entity corrected from "Tannit AI, Inc." to Tannit AI LLC (Israel).
+  Domain normalised from tannit.ai to tannit.org.
+
+  Removed as contradicting the stated zero-retention position:
+   - monitoring / pre-screening rights and "no expectation of privacy" clause
+   - perpetual sublicensable licence to reproduce, display and redistribute
+     customer content, including for promotional use
+   - tiered model-training terms permitting training on free-tier content
+
+  Removed as blocking distribution through platform partners (e.g. OpenRouter):
+   - restriction of the API to individual, non-commercial use
+   - prohibition on third parties accessing the API through an account
+   - pointer to a non-existent business-terms document
+   - prohibition on using outputs to train or distil models
+
+  Removed as not applicable: multimodal/31-language product description,
+  push notifications, social publishing integrations, medical-history
+  registration data, mobile device requirements, YouTube API and Google
+  Drive / S3 processing, parents / subsidiaries / affiliates.
+
+  NOT SUPPLIED, PLACEHOLDER INSERTED: the supplied preamble referenced an
+  arbitration agreement, class-action waiver, jury-trial waiver and 30-day
+  opt-out at "Section 14", and amendment terms at "Section 15.6". Neither
+  section was provided. See section 13.
 -->
 <body>
 
@@ -35,61 +60,161 @@
   <div class="wrap">
 
     <h1>Terms of service</h1>
-    <p class="stamp">Tannit AI LLC · Horev 50, Haifa, Israel · Effective <span class="ph">[[EFFECTIVE_DATE]]</span> · Version 1.0</p>
+    <p class="stamp">Tannit AI LLC · Horev 50, Haifa, Israel · Last updated <span class="ph">[[EFFECTIVE_DATE]]</span></p>
 
-    <p>These terms govern access to the inference API operated by Tannit AI LLC (&ldquo;Tannit&rdquo;, &ldquo;we&rdquo;). By using the service, or by accessing it through an intermediary platform, you agree to them.</p>
+    <p><strong>Please read these Terms of Service (the &ldquo;Agreement&rdquo;) carefully. This Agreement is a legal contract between you (&ldquo;User&rdquo; or &ldquo;you&rdquo;) and Tannit AI LLC (&ldquo;Tannit&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo; or &ldquo;our&rdquo;).</strong></p>
 
-    <h2>1. The service</h2>
-    <p>Tannit provides API access to the open-weight model Qwen3.8-27B, served on infrastructure we operate. We may change the models served, adjust capacity, or modify the API, and will give reasonable notice of changes that break compatibility.</p>
+    <p>By accessing or using the tannit.org website, or any other website with an authorised link to this Agreement (the &ldquo;Website&rdquo;), registering for an account with Tannit, or accessing or using any of the services, products, applications, content, data, information, features or resources available or enabled via the Website or our API (collectively, the &ldquo;Services&rdquo;), or by taking any other action signifying your acceptance of this Agreement, you represent that you have read, understand and agree to be bound by this Agreement; that you are at least eighteen years old; and that you have the authority to enter into this Agreement personally or on behalf of the legal entity you have named as the User, and to bind that entity to this Agreement. If you do not agree to be bound by this Agreement, you may not access or use the Services.</p>
 
-    <h2>2. Accounts and credentials</h2>
-    <p>You are responsible for keeping API credentials confidential and for all usage billed to your account, whether or not you authorised it. Notify us at <a href="mailto:support@tannit.org">support@tannit.org</a> if you believe a credential has been exposed, and we will revoke it.</p>
+    <p>This Agreement may be changed by Tannit in accordance with section 14.4 below. Please check the Website periodically to view the then-current Agreement.</p>
 
-    <h2>3. Acceptable use</h2>
-    <p>You may not use the service to:</p>
+    <h2>1. The Services</h2>
+
+    <h3>1.1 Overview</h3>
+    <p>Tannit operates inference infrastructure providing programmatic access to open-weight machine learning models through an API. The models we serve, their capabilities, context limits and pricing are described on the <a href="model.html">models</a> and <a href="pricing.html">pricing</a> pages. Tannit does not develop the models it serves; the proprietary element of the Services is the hardware and inference infrastructure on which those models run.</p>
+
+    <h3>1.2 Prompts and outputs</h3>
+    <p>The Services generate responses (&ldquo;Outputs&rdquo;) in response to the inputs you submit (&ldquo;Prompts&rdquo;). You acknowledge that Outputs are generated statistically from your Prompts and that Tannit exercises no editorial control over either. All Outputs are provided &ldquo;as is&rdquo; and with all faults, and Tannit makes no representations or warranties of any kind with respect to any Output, including as to accuracy, completeness, truthfulness, timeliness or fitness for any purpose. You are solely responsible for your use of Outputs and assume all risks associated with that use, including any third-party claims arising from it.</p>
+
+    <h3>1.3 API access</h3>
+    <p>Subject to this Agreement, Tannit makes its API available for both personal and commercial use. Your access may require registration, usage credits or payment as described in section 6. You agree to use the API in accordance with Tannit's published guidelines, and not to attempt to reverse engineer or replicate the API itself.</p>
+
+    <h3>1.4 Platform partners and intermediaries</h3>
+    <p>Tannit makes the Services available directly and through third-party platforms, marketplaces and routing services that we have authorised to resell or provide access to our capacity (each, a &ldquo;Platform Partner&rdquo;). Where you access the Services through a Platform Partner, this Agreement governs Tannit's provision of inference, and your relationship with that Platform Partner is governed separately by its own terms. Nothing in this Agreement prevents an authorised Platform Partner from providing its own users with access to the Services through its account.</p>
+
+    <h3>1.5 Supplemental terms</h3>
+    <p>Your use of certain features may be subject to additional terms (&ldquo;Supplemental Terms&rdquo;), which will be presented to you for acceptance. Where this Agreement is inconsistent with applicable Supplemental Terms, the Supplemental Terms control with respect to that feature.</p>
+
+    <h3>1.6 Updates</h3>
+    <p>The Services are evolving. Tannit may update, modify or discontinue models, features and API behaviour. We will give reasonable advance notice of changes that break compatibility. Any future release, update or addition to the Services is subject to this Agreement.</p>
+
+    <h3>1.7 Service communications</h3>
+    <p>By entering into this Agreement you agree to receive operational communications from us, including outage notices, security advisories and administrative messages, as described in our <a href="privacy.html">Privacy Policy</a>. You may unsubscribe from promotional email at any time using the unsubscribe link in the message itself. Operational notices cannot be opted out of while your account is active.</p>
+
+    <h2>2. Registration</h2>
+
+    <h3>2.1 Accounts</h3>
+    <p>To access certain features you may be required to register an account (an &ldquo;Account&rdquo;). In registering, you agree to provide true, accurate, current and complete information as prompted by the registration form (the &ldquo;Registration Data&rdquo;), and to keep it up to date.</p>
+
+    <h3>2.2 Account responsibility</h3>
+    <p>You are responsible for maintaining the confidentiality of your credentials and for all activity that occurs under your Account, whether or not you authorised it. Notify us at <a href="mailto:support@tannit.org">support@tannit.org</a> if you believe a credential has been exposed, and we will revoke it. You agree not to create an Account using a false identity, or on behalf of someone other than yourself without authority. If you provide information that is untrue, inaccurate or incomplete, or if we have reasonable grounds to suspect as much, we may suspend or terminate your Account.</p>
+
+    <h3>2.3 Equipment</h3>
+    <p>You must provide all equipment, software and connectivity necessary to access the Services, and you are solely responsible for any costs you incur in doing so.</p>
+
+    <h2>3. Content</h2>
+
+    <h3>3.1 Responsibility for content</h3>
+    <p>You are entirely responsible for all content you submit through the Services, including all Prompts (collectively, &ldquo;Your Content&rdquo;). You represent that you have all rights, licences, permissions and consents necessary to submit Your Content, including in respect of any personal data belonging to your own end users.</p>
+
+    <h3>3.2 Responsible use</h3>
+    <p>You are solely responsible for your Prompts, your Outputs and your use of them. You must review any Output before relying on it and exercise your own judgement as to its suitability. You shall not submit Prompts or use Outputs that: infringe or misappropriate any third party's intellectual property or other proprietary rights; are deceptive, defamatory, obscene or illegal; contain viruses, worms or other malicious code; or contain sensitive personal information such as government identification numbers, passport numbers or financial account numbers, where you do not have a lawful basis to process it. Tannit may suspend or terminate access for failure to comply with this section.</p>
+
+    <h3>3.3 No monitoring of content</h3>
+    <p>Tannit does not monitor, pre-screen, review or store the content of your Prompts or Outputs. Inference is performed in memory and content is not written to persistent storage. Because we do not retain your content, we cannot produce, restore, review or delete it on request.</p>
+    <p>Abuse detection is performed using request metadata only &mdash; such as request volume, timing, status codes and token counts &mdash; and not by inspecting content. Where required by applicable law, legal process or a governmental request, we will comply to the extent we are able, which is limited by the fact that we do not hold your content.</p>
+
+    <h3>3.4 Storage</h3>
+    <p>Tannit has no obligation to store Your Content and, as described above, does not do so. Tannit has no responsibility or liability for the deletion, loss or non-delivery of any content.</p>
+
+    <h2>4. Ownership</h2>
+
+    <h3>4.1 The Services</h3>
+    <p>Except with respect to Your Content, Tannit and its suppliers own all right, title and interest in the Services, including the hardware, infrastructure and software that constitute them. You will not remove, alter or obscure any proprietary notices. Except as expressly stated in this Agreement, you are granted no intellectual property rights in the Services by implication, estoppel or otherwise.</p>
+
+    <h3>4.2 Trademarks</h3>
+    <p>The TANNIT mark, the Tannit logo and related marks are trademarks of Tannit and may not be used without permission. Other trademarks that may appear in connection with the Services are the property of their respective owners.</p>
+
+    <h3>4.3 Underlying models</h3>
+    <p>The models served through the Services are developed by third parties and made available under their own open-source licences, which are identified on the <a href="model.html">models page</a>. Your use of Outputs is additionally subject to the terms of the applicable model licence. Tannit is not affiliated with the developers of those models and makes no representation on their behalf.</p>
+
+    <h3>4.4 Your Content</h3>
+    <p>Tannit does not claim ownership of Your Content. As between you and Tannit, you retain all rights in your Prompts, and you own your Outputs to the extent they are capable of ownership.</p>
+    <p>You grant Tannit a limited, non-exclusive, worldwide, royalty-free licence to process, transmit and transiently store Your Content solely for the purpose of performing the inference you request and returning the Output to you. This licence terminates when the request completes. <strong>Tannit does not use Your Content to train, develop, fine-tune or improve any machine learning model, and does not license Your Content to any third party for that or any other purpose.</strong></p>
+    <p>Tannit may use aggregated request metadata that does not identify you or your content &mdash; such as token volumes, latency and error rates &mdash; for capacity planning, performance monitoring and abuse prevention.</p>
+
+    <h3>4.5 Feedback</h3>
+    <p>If you provide suggestions, enhancement requests or other feedback relating to the Services (&ldquo;Feedback&rdquo;), you grant Tannit a royalty-free, worldwide, transferable, sublicensable, irrevocable, perpetual licence to use or incorporate that Feedback into the Services. Tannit will not identify you as the source of any Feedback.</p>
+
+    <h2>5. User conduct and restrictions</h2>
+
+    <p>As a condition of use, you agree not to use the Services for any purpose prohibited by this Agreement or by applicable law. You shall not, and shall not permit any third party to:</p>
     <ul>
-      <li>Break any applicable law, or infringe anyone's intellectual property or privacy rights.</li>
-      <li>Generate or distribute material that sexually exploits or endangers children.</li>
-      <li>Produce content intended to harass, defame, or threaten a person, or to incite violence.</li>
-      <li>Develop weapons, or provide operational assistance toward chemical, biological, radiological or nuclear capability.</li>
-      <li>Conduct unauthorised intrusion, distribute malware, or attack systems you do not own.</li>
-      <li>Generate deceptive content presented as human-authored where doing so would mislead people to their detriment, including in electoral, medical, legal or financial contexts.</li>
-      <li>Circumvent rate limits, resell raw capacity without agreement, or attempt to extract or reconstruct our infrastructure configuration.</li>
+      <li>Frame the Services, or use framing techniques to enclose any Tannit trademark or logo.</li>
+      <li>Use metatags or other hidden text incorporating Tannit's name or trademarks.</li>
+      <li>Modify, translate, adapt, disassemble, decompile, reverse compile or reverse engineer any part of the Services, except to the extent this restriction is prohibited by applicable law.</li>
+      <li>Use automated tools to scrape or download data from the Website, except that operators of public search engines are granted revocable permission to index publicly available material.</li>
+      <li>Remove or destroy any copyright notice or proprietary marking.</li>
+      <li>Impersonate any person or entity, including any employee or representative of Tannit.</li>
+      <li>Interfere with the proper functioning of the Services, violate or attempt to violate any security feature, introduce malicious code, or degrade the Services for other users by means including overloading, flooding or spamming.</li>
+      <li>Use the Services to generate or distribute material that sexually exploits or endangers children.</li>
+      <li>Use the Services to harass, defame or threaten any person, or to incite violence.</li>
+      <li>Use the Services to develop weapons, or to provide operational assistance toward chemical, biological, radiological or nuclear capability.</li>
+      <li>Use the Services to conduct unauthorised intrusion, distribute malware, or attack systems you do not own or have permission to test.</li>
+      <li>Use the Services to generate deceptive content presented as human-authored where doing so would mislead people to their detriment, including in electoral, medical, legal or financial contexts.</li>
+      <li>Circumvent rate limits or usage restrictions applied to your Account.</li>
+      <li>Take any action or make available any content that is unlawful, threatening, abusive, harassing, defamatory, fraudulent, invasive of another's privacy, tortious or obscene, or that constitutes unauthorised or unsolicited advertising or bulk email.</li>
     </ul>
-    <p>We may suspend an account that violates this section. Where the violation is severe or ongoing, we may do so without prior notice.</p>
+    <p>The rights granted to you under this Agreement are subject to your compliance with this section. Any unauthorised use of the Services terminates the licences granted by Tannit under this Agreement.</p>
 
-    <h2>4. Content</h2>
-    <p>You retain all rights in the prompts you submit. As between you and Tannit, you own the completions returned to you, to the extent they are capable of ownership. We claim no licence over either beyond what is technically necessary to process the request.</p>
-    <p>Model outputs are generated statistically and may be inaccurate, incomplete or unsuitable for your purpose. They are not professional advice. You are responsible for reviewing outputs before relying on or publishing them.</p>
+    <h2>6. Fees and payment</h2>
 
-    <h2>5. Underlying model</h2>
-    <p>Qwen3.8-27B is developed by Alibaba and licensed under the Apache License 2.0. Your use of outputs is additionally subject to that licence. Tannit is not affiliated with Alibaba and makes no representation on its behalf.</p>
+    <h3>6.1 Payment processing</h3>
+    <p>Tannit uses <span class="ph">[[PAYMENT_PROCESSOR]]</span> as its third-party payment service provider. If you make a purchase, you will provide your payment details directly to that provider, and you agree to be bound by its terms and privacy policy. You authorise Tannit and the provider to share the information and payment instructions you provide to the minimum extent required to complete your transactions. Online payment transactions may be subject to validation checks by the provider and your card issuer, and we are not responsible if your card issuer declines to authorise payment. Your card issuer may charge a handling or processing fee, for which we are not responsible.</p>
 
-    <h2>6. Fees</h2>
-    <p>Usage is billed per token at the rates published on our pricing page, in USD, monthly in arrears unless agreed otherwise. Rates may change with <span class="ph">[[PRICE_NOTICE_PERIOD]]</span> notice. Overdue amounts may result in suspension. You are responsible for any applicable taxes other than taxes on our income.</p>
+    <h3>6.2 Fees</h3>
+    <p>You agree to pay all fees and charges (&ldquo;Fees&rdquo;) applicable to your Account in accordance with the rates in effect at the time a Fee becomes due, as set out on our <a href="pricing.html">pricing page</a>. By providing payment information you authorise Tannit and its payment provider to invoice your Account for all Fees due, without additional notice or consent. You shall promptly notify Tannit of any change to your payment information. Tannit may change its prices and billing methods on <span class="ph">[[PRICE_NOTICE_PERIOD]]</span> notice. Failure to provide accurate payment information, or our inability to collect payment, constitutes a material breach of this Agreement. Except as set out in this Agreement, Fees are non-refundable.</p>
 
-    <h2>7. Availability</h2>
-    <p>We aim to keep the service continuously available but do not guarantee uninterrupted operation. Maintenance, capacity constraints and upstream failures may cause downtime. Any service level commitment applies only where it is set out in a separate written agreement.</p>
+    <h3>6.3 Usage credits</h3>
+    <p>You may be required to add usage credits (&ldquo;Usage Credits&rdquo;) to your Account to pre-pay for API access. Usage Credits may be added in any increment presented at the point of purchase, and are charged in accordance with section 6.2 on confirmation. API usage results in a deduction from your Usage Credit balance, which you may review in your Account. If your usage exceeds your balance, you will be prompted to add further Usage Credits. Usage Credits may not be resold, bartered, transferred for value or redeemed for cash, are non-refundable except where required by law, and must be used within <span class="ph">[[CREDIT_EXPIRY]]</span> of the date of purchase unless otherwise specified at the time of purchase.</p>
 
-    <h2>8. Warranties</h2>
-    <p>The service is provided &ldquo;as is&rdquo;. To the maximum extent permitted by law, we disclaim all implied warranties, including merchantability, fitness for a particular purpose, and non-infringement. Nothing in these terms excludes liability that cannot lawfully be excluded.</p>
+    <h3>6.4 Taxes</h3>
+    <p>Fees do not include any sales, use, value-added or equivalent tax that may be due in connection with the Services. Where Tannit determines it has a legal obligation to collect such tax from you, it will do so in addition to the Fees. Where any such tax is due in a jurisdiction and you have not remitted it to Tannit, you are responsible for paying it, together with any related penalties or interest, to the relevant tax authority, and you shall indemnify Tannit for any liability or expense it incurs in connection with it. On request you will provide official receipts or other evidence that applicable taxes have been paid.</p>
 
-    <h2>9. Liability</h2>
-    <p>Neither party is liable for indirect, incidental, special or consequential loss, or for lost profits, revenue or data. Our total aggregate liability arising out of the service is limited to the amounts you paid us in the <span class="ph">[[LIABILITY_WINDOW]]</span> preceding the event giving rise to the claim.</p>
+    <h3>6.5 Withholding</h3>
+    <p>You shall make all payments of Fees free and clear of, and without reduction for, any withholding taxes. Any such taxes imposed on payments to Tannit are your sole responsibility, and you shall provide official receipts or other reasonable evidence that they have been paid.</p>
 
-    <h2>10. Indemnity</h2>
-    <p>You will indemnify Tannit against third-party claims arising from your use of the service in breach of these terms, including claims relating to content you submitted or outputs you published.</p>
+    <h2>7. Third-party services</h2>
+    <p>The Services and Website may contain links to third-party websites and applications. Those are not under Tannit's control, and Tannit is not responsible for them. We provide such links as a convenience and do not review, approve, monitor, endorse or warrant any third-party service or any product provided in connection with it. You use them at your own risk, and once you leave our Services this Agreement no longer governs. You should review the applicable terms and privacy practices of any third-party service before proceeding.</p>
 
-    <h2>11. Suspension and termination</h2>
-    <p>You may stop using the service at any time. We may terminate or suspend access for material breach, non-payment, or where continued provision would expose us to legal risk. Sections 4, 8, 9, 10 and 13 survive termination.</p>
+    <h2>8. Availability</h2>
+    <p>We aim to keep the Services continuously available but do not guarantee uninterrupted operation. Maintenance, capacity constraints and upstream failures may cause downtime. Any service level commitment applies only where it is set out in a separate written agreement between you and Tannit.</p>
 
-    <h2>12. Changes to these terms</h2>
-    <p>We may revise these terms. Material changes will be notified to account holders by email before taking effect. Continued use after the effective date constitutes acceptance.</p>
+    <h2>9. Disclaimers</h2>
+    <p>The Services are provided &ldquo;as is&rdquo; and &ldquo;as available&rdquo;. To the maximum extent permitted by law, Tannit disclaims all warranties, whether express, implied or statutory, including implied warranties of merchantability, fitness for a particular purpose, title and non-infringement, and any warranty that the Services will be uninterrupted, secure or error-free, or that Outputs will be accurate or reliable. Nothing in this Agreement excludes or limits liability that cannot lawfully be excluded or limited.</p>
 
-    <h2>13. Governing law</h2>
-    <p>These terms are governed by the laws of the State of Israel. The competent courts of <span class="ph">[[JURISDICTION_CITY]]</span>, Israel have exclusive jurisdiction, without prejudice to mandatory consumer protections available to you in your country of residence.</p>
+    <h2>10. Limitation of liability</h2>
+    <p>To the maximum extent permitted by law, neither party is liable for indirect, incidental, special, consequential, exemplary or punitive damages, or for lost profits, lost revenue, lost data or business interruption, arising out of or relating to this Agreement, however caused and on any theory of liability. Tannit's total aggregate liability arising out of or relating to this Agreement is limited to the amounts you paid Tannit in the <span class="ph">[[LIABILITY_WINDOW]]</span> preceding the event giving rise to the claim.</p>
 
-    <h2>14. Contact</h2>
+    <h2>11. Indemnification</h2>
+    <p>You agree to indemnify and hold harmless Tannit and its officers, employees, agents, partners, suppliers and licensors (each a &ldquo;Tannit Party&rdquo;) from any losses, costs, liabilities and expenses, including reasonable legal fees, arising out of: Your Content, including Prompts; your use of, or inability to use, the Services; your breach of this Agreement; your violation of the rights of any other party; or your violation of any applicable law or regulation. Tannit reserves the right, at its own cost, to assume the exclusive defence and control of any matter otherwise subject to indemnification by you, in which event you will cooperate in asserting any available defences.</p>
+
+    <h2>12. Term and termination</h2>
+    <p>You may stop using the Services at any time. Tannit may suspend or terminate your access for material breach of this Agreement, for non-payment, or where continued provision would expose Tannit to legal risk. Where circumstances allow, we will give notice before doing so. Sections 3.1, 4, 9, 10, 11 and 13 survive termination.</p>
+
+    <h2>13. Governing law and disputes</h2>
+
+    <div class="callout">
+      <p><strong>Incomplete.</strong> <span class="ph">[[DISPUTE_RESOLUTION]]</span> The supplied draft referred to an arbitration agreement, class-action waiver, jury-trial waiver and thirty-day opt-out, but that section was not provided. US-style binding arbitration may not be the appropriate mechanism for an Israeli company. This section requires drafting by counsel.</p>
+    </div>
+
+    <p>This Agreement is governed by the laws of the State of Israel, without regard to its conflict of laws principles. Subject to any dispute resolution mechanism adopted under this section, the competent courts of <span class="ph">[[JURISDICTION_CITY]]</span>, Israel have exclusive jurisdiction over any dispute arising out of or relating to this Agreement. Nothing in this section deprives you of the protection of mandatory consumer provisions available to you under the law of your country of residence.</p>
+
+    <h2>14. General</h2>
+
+    <h3>14.1 Entire agreement</h3>
+    <p>This Agreement, together with any Supplemental Terms and our Privacy Policy, constitutes the entire agreement between you and Tannit regarding the Services, and supersedes any prior agreement on that subject.</p>
+
+    <h3>14.2 Severability</h3>
+    <p>If any provision of this Agreement is held unenforceable, that provision will be limited or eliminated to the minimum extent necessary, and the remainder will continue in full force.</p>
+
+    <h3>14.3 Assignment</h3>
+    <p>You may not assign this Agreement without Tannit's prior written consent. Tannit may assign it in connection with a merger, acquisition or sale of all or substantially all of its assets.</p>
+
+    <h3>14.4 Changes to this Agreement</h3>
+    <p>Tannit may revise this Agreement. Where a change is material, we will notify account holders by email and update the date at the top of this page before it takes effect. Your continued use of the Services after the effective date constitutes acceptance of the revised Agreement.</p>
+
+    <h3>14.5 Contact</h3>
     <p>
       Tannit AI LLC<br>
       Horev 50, Haifa, Israel<br>
